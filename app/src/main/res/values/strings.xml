@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">ShakeWord</string>
+    <string name="app_name" translatable="false">ShakeWord</string>
+
+    <string name="test" translatable="false">Test</string>
+    <string name="lorem" translatable="false">Lorem inpsum dolores color</string>
+
+    <string name="btn_submit">Valider</string>
+    <string name="btn_skip">Passer</string>
+    <string name="rep">Entrez votre texte</string>
 </resources>

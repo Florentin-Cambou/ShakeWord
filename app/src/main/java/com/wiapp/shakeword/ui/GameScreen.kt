@@ -15,21 +15,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.compose.ShakeWordAppTheme
+import com.wiapp.shakeword.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GameScreen() {
-    val modifier: Modifier = Modifier
-
         Column(
             modifier = Modifier
                 .padding(30.dp),
@@ -76,9 +77,11 @@ fun GameScreen() {
                         text = "Lorem ipsum dolores"
                     )
                     TextField(
+                        colors = TextFieldDefaults.textFieldColors(),
                         value = "",
+                        singleLine = true,
                         onValueChange = {  },
-                        label = { Text(text = "Entrez votre texte")}
+                        label = { Text(text = stringResource(id = R.string.rep))}
                     )
                 }
             }
@@ -87,13 +90,13 @@ fun GameScreen() {
                 modifier = Modifier.fillMaxWidth(),
                 onClick = { /*TODO*/ }
             ) {
-                Text(text = "Valider")
+                Text(text = stringResource(id = R.string.btn_submit))
             }
             Button(
                 modifier = Modifier.fillMaxWidth(),
                 onClick = { /*TODO*/ }
             ) {
-                Text(text = "Passer")
+                Text(text = stringResource(id = R.string.btn_skip))
             }
             Text(
                 modifier = Modifier
@@ -106,9 +109,12 @@ fun GameScreen() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    locale = "en"
+)
 @Composable
-fun preview() {
+fun Preview() {
     ShakeWordAppTheme {
         GameScreen()
     }

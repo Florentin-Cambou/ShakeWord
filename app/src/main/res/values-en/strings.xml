@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_skip">Skip</string>
+    <string name="rep">Enter your text</string>
+</resources>
